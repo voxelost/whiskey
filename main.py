@@ -5,7 +5,7 @@ import os
 import json
 
 
-from class_definitions.client import Bot
+from class_definitions.bot import Bot
 from commands.error_handlers import default_error_handler
 from commands.auth_commands import anyone_anywhere, owner_only
 
