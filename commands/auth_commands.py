@@ -1,6 +1,6 @@
 import discord
 
-from class_definitions.client import Bot
+from class_definitions.bot import Bot
 
 
 async def owner_only(message: discord.Message, bot: Bot, *args, **kwargs):
