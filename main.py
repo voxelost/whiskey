@@ -22,20 +22,10 @@ bot = Bot(
 )
 
 
-@bot.command(triggers=['test', 'error'], auth_func=owner_only)
-async def dummy_func(*args, **kwargs):
-    """try to fail by dividing 1 by 0"""
-
-    yield 'trying to concute 1/0'
-    yield 'ą'
-    yield 'ąą'
-    yield 'ąąą'
-    yield f'impossibru: {1/0}'
-
-
 @bot.command(triggers=['sys', 'system', 'os'], auth_func=owner_only)
 async def system_command(command_parsed: dict, *args, **kwargs):
-    """execute a system command using os.popen()"""
+    # # system_command.__doc__ = 'testin'
+    # setattr(system_command, '__doc__', f'ninja')
 
     with os.popen(command_parsed['arguments_raw']) as p:
         yield p.read().strip()
